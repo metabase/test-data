@@ -5,3 +5,4 @@ steps:
 - type: sql
   file: dots-in-names.db.sql
   context: db
+ b

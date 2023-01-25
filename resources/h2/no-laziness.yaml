@@ -1,7 +1,7 @@
 steps:
 - type: sql
   context: server
-  file: no-lazyness.server.sql
+  file: shutdown.sql
 - type: sql
   context: db
-  file: no-lazyness.db.sql
+  file: no-laziness.db.sql

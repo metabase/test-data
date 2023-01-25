@@ -3,8 +3,5 @@ steps:
   context: server
   file: shutdown.sql
 - type: sql
-  file: yyyymmddhhss-binary-times.server.sql
-  context: server
-- type: sql
   file: yyyymmddhhss-binary-times.db.sql
   context: db

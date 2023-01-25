@@ -3,8 +3,5 @@ steps:
   context: server
   file: shutdown.sql
 - type: sql
-  file: just-dates.server.sql
-  context: server
-- type: sql
   file: just-dates.db.sql
   context: db

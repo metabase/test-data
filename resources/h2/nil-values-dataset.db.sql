@@ -9,7 +9,7 @@ CREATE TABLE "TBL" (
 );
 
 INSERT INTO "TBL" ("MYTYPE", "MYFIELD")
-VALUE
+VALUES
 ('value', 'value'),
 ('null', NULL),
 ('empty', '');
