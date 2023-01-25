@@ -1,11 +1,6 @@
--- Create a non-admin account 'GUEST' which will be used from here on out
-CREATE USER IF NOT EXISTS GUEST PASSWORD 'guest';
-
--- Set DB_CLOSE_DELAY here because only admins are allowed to do it, so we can't set it via the connection string.
--- Set it to to -1 (no automatic closing)
 SET DB_CLOSE_DELAY -1;
 
-DROP TABLE IF EXISTS "PRODUCTS";
+CREATE USER IF NOT EXISTS GUEST PASSWORD 'guest';
 
 CREATE TABLE "PRODUCTS" (
   "ID" BIGINT AUTO_INCREMENT,
@@ -19,11 +14,7 @@ CREATE TABLE "PRODUCTS" (
   PRIMARY KEY ("ID")
 );
 
-;
-
 GRANT ALL ON "PRODUCTS" TO GUEST;
-
-DROP TABLE IF EXISTS "PEOPLE";
 
 CREATE TABLE "PEOPLE" (
   "ID" BIGINT AUTO_INCREMENT,
@@ -42,11 +33,7 @@ CREATE TABLE "PEOPLE" (
   PRIMARY KEY ("ID")
 );
 
-;
-
 GRANT ALL ON "PEOPLE" TO GUEST;
-
-DROP TABLE IF EXISTS "REVIEWS";
 
 CREATE TABLE "REVIEWS" (
   "ID" BIGINT AUTO_INCREMENT,
@@ -58,11 +45,7 @@ CREATE TABLE "REVIEWS" (
   PRIMARY KEY ("ID")
 );
 
-;
-
 GRANT ALL ON "REVIEWS" TO GUEST;
-
-DROP TABLE IF EXISTS "ORDERS";
 
 CREATE TABLE "ORDERS" (
   "ID" BIGINT AUTO_INCREMENT,

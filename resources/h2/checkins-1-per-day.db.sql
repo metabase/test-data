@@ -1,15 +1,12 @@
+SET DB_CLOSE_DELAY -1;
 
-DROP TABLE IF EXISTS "CHECKINS";
+CREATE USER IF NOT EXISTS GUEST PASSWORD 'guest';
 
 CREATE TABLE "CHECKINS" (
   "ID" BIGINT AUTO_INCREMENT,
   "TIMESTAMP" DATETIME,
   PRIMARY KEY ("ID")
 );
-
-;
-
-GRANT ALL ON "CHECKINS" TO GUEST;
 
 -- 30 rows
 INSERT INTO "CHECKINS" ("ID", "TIMESTAMP")
@@ -44,4 +41,3 @@ VALUES
 (28, dateadd('second', CAST(1036800 AS long), CAST(now() AS datetime))),
 (29, dateadd('second', CAST(1123200 AS long), CAST(now() AS datetime))),
 (30, dateadd('second', CAST(1209600 AS long), CAST(now() AS datetime)));
-

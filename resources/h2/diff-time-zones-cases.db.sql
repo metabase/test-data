@@ -1,5 +1,6 @@
+SET DB_CLOSE_DELAY -1;
 
-DROP TABLE IF EXISTS "TIMES";
+CREATE USER IF NOT EXISTS GUEST PASSWORD 'guest';
 
 CREATE TABLE "TIMES" (
   "ID" BIGINT AUTO_INCREMENT,
@@ -9,8 +10,6 @@ CREATE TABLE "TIMES" (
   "B_DT_TZ_TEXT" VARCHAR,
   PRIMARY KEY ("ID")
 );
-
-;
 
 GRANT ALL ON "TIMES" TO GUEST;
 
@@ -52,4 +51,3 @@ VALUES
 (33, timestamp with time zone '2023-01-02 00:00:00.000+01:00', timestamp with time zone '2023-01-02 00:00:00.000Z', '2023-01-02T00:00:00+01:00', '2023-01-02T00:00:00Z'),
 (34, timestamp with time zone '2023-01-02 00:00:00.000+01:00', timestamp with time zone '2023-10-02 00:00:00.000Z', '2023-01-02T00:00:00+01:00', '2023-10-02T00:00:00Z'),
 (35, timestamp with time zone '2023-10-02 00:00:00.000+01:00', timestamp with time zone '2023-10-02 00:00:00.000Z', '2023-10-02T00:00:00+01:00', '2023-10-02T00:00:00Z');
-
