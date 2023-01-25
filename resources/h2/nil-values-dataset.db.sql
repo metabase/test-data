@@ -8,6 +8,8 @@ CREATE TABLE "TBL" (
   "MYFIELD" TEXT
 );
 
+GRANT ALL ON "TBL" TO GUEST;
+
 INSERT INTO "TBL" ("MYTYPE", "MYFIELD")
 VALUES
 ('value', 'value'),

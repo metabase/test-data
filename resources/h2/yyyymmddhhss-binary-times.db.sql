@@ -14,21 +14,6 @@ GRANT ALL ON "TIMES" TO GUEST;
 -- 3 rows
 INSERT INTO "TIMES" ("ID", "NAME", "AS_BYTES")
 VALUES
-(
-  1,
-  'foo',
-  2023 -01 -25 02: 03: 25,
-  369 WARN util.unprepare:: Don 't know how to unprepare values of class [B
-[B@7cc51dd9),
-(
-  2,
-  'bar',
-  2023 -01 -25 02: 03: 25,
-  369 WARN util.unprepare:: Don 't know how to unprepare values of class [B
-[B@188b50a5),
-(
-  3,
-  'baz',
-  2023 -01 -25 02: 03: 25,
-  369 WARN util.unprepare:: Don 't know how to unprepare values of class [B
-[B@36c845d6);
+(1, 'foo', X'32 30 31 39 30 34 32 31 31 36 34 33 30 30'), -- 20190421164300
+(2, 'bar', X'32 30 32 30 30 34 32 31 31 36 34 33 30 30'), -- 20200421164300
+(3, 'baz', X'32 30 32 31 30 34 32 31 31 36 34 33 30 30'); -- 20210421164300
