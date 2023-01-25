@@ -1,0 +1,7 @@
+steps:
+- type: sql
+  context: server
+  file: checkins-1-per-day.server.sql
+- type: sql
+  context: db
+  file: checkins-1-per-day.db.sql
